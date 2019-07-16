@@ -1,28 +1,25 @@
 //
-//  LoginViewController.m
+//  RegisteViewController.m
 //  baby
 //
-//  Created by Guanxw on 2019/7/12.
+//  Created by Polery on 2019/7/16.
 //
 
+#import "RegisteViewController.h"
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface RegisteViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPwdTF;
 
 @end
 
-@implementation LoginViewController
+@implementation RegisteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -34,13 +31,17 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)loginBtnClicked:(id)sender {
+- (IBAction)registeBtnClicked:(id)sender {
     
 //    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 //    [ud setObject:self.accountTF.text forKey:@"user_name"];
 //    [ud setObject:self.passwordTF.text forKey:@"password"];
 
-    [self dismissViewControllerAnimated:YES completion:^{
+    UIViewController *vc = self.presentingViewController;
+    while (![vc isKindOfClass:[UINavigationController class]]) {
+        vc = vc.presentingViewController;
+    }
+    [vc dismissViewControllerAnimated:YES completion:^{
 
     }];
 }

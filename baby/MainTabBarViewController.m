@@ -6,6 +6,7 @@
 //
 
 #import "MainTabBarViewController.h"
+#import "login/LoginViewController.h"
 
 @interface MainTabBarViewController ()
 
@@ -16,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *user_name = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_name"];
+    if(user_name != nil) {
+        
+    } else {
+        UIStoryboard*sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *login=[sb instantiateViewControllerWithIdentifier:@"login"];
+        [self.navigationController presentViewController:login animated:NO completion:^{
+            
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
