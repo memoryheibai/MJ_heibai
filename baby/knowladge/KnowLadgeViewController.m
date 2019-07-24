@@ -32,6 +32,8 @@
     timeArr = [NSArray arrayWithObjects:@"APP 昵称发布 2019-07-08",@"APP 昵称发布 2019-07-07", @"APP 昵称发布 2019-07-06", nil];
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,7 +45,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

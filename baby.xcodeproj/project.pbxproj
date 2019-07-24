@@ -38,6 +38,9 @@
 		5F43C18322D7409B0041708E /* ReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F43C18222D7409B0041708E /* ReleaseViewController.m */; };
 		5F43C18822D741100041708E /* ReleaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F43C18622D741100041708E /* ReleaseTableViewCell.m */; };
 		5F43C18922D741100041708E /* ReleaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F43C18722D741100041708E /* ReleaseTableViewCell.xib */; };
+		5FB8E16922DEC2AF00C4C7AA /* baby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8E16722DEC2AF00C4C7AA /* baby.xcdatamodeld */; };
+		5FB8E16E22DEC2BA00C4C7AA /* babycome.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8E16B22DEC2BA00C4C7AA /* babycome.sqlite */; };
+		5FB8E16F22DEC2BA00C4C7AA /* SQLiteSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8E16D22DEC2BA00C4C7AA /* SQLiteSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,10 @@
 		5F43C18522D741100041708E /* ReleaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseTableViewCell.h; sourceTree = "<group>"; };
 		5F43C18622D741100041708E /* ReleaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseTableViewCell.m; sourceTree = "<group>"; };
 		5F43C18722D741100041708E /* ReleaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseTableViewCell.xib; sourceTree = "<group>"; };
+		5FB8E16822DEC2AF00C4C7AA /* baby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = baby.xcdatamodel; sourceTree = "<group>"; };
+		5FB8E16B22DEC2BA00C4C7AA /* babycome.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = babycome.sqlite; sourceTree = "<group>"; };
+		5FB8E16C22DEC2BA00C4C7AA /* SQLiteSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteSingleton.h; sourceTree = "<group>"; };
+		5FB8E16D22DEC2BA00C4C7AA /* SQLiteSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +198,8 @@
 		5F43C13322D6D3D90041708E /* baby */ = {
 			isa = PBXGroup;
 			children = (
+				5FB8E16A22DEC2BA00C4C7AA /* utils */,
+				5FB8E16722DEC2AF00C4C7AA /* baby.xcdatamodeld */,
 				5F3B555822D87E1400959C0A /* login */,
 				5F3B554E22D875A800959C0A /* knowladge */,
 				5F43C18022D7406F0041708E /* release */,
@@ -305,6 +314,16 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		5FB8E16A22DEC2BA00C4C7AA /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5FB8E16B22DEC2BA00C4C7AA /* babycome.sqlite */,
+				5FB8E16C22DEC2BA00C4C7AA /* SQLiteSingleton.h */,
+				5FB8E16D22DEC2BA00C4C7AA /* SQLiteSingleton.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +434,7 @@
 				5F43C18922D741100041708E /* ReleaseTableViewCell.xib in Resources */,
 				5F3B554422D8521800959C0A /* MyCollectionTableViewCell.xib in Resources */,
 				5F3B555722D87A6100959C0A /* HomeTableViewCell.xib in Resources */,
+				5FB8E16E22DEC2BA00C4C7AA /* babycome.sqlite in Resources */,
 				5F43C14122D6D3D90041708E /* Assets.xcassets in Resources */,
 				5F3B553F22D83A4F00959C0A /* MyQuestionTableViewCell.xib in Resources */,
 				5F43C17C22D7296F0041708E /* PersonTableViewCell.xib in Resources */,
@@ -452,6 +472,7 @@
 				5F3B554A22D870CC00959C0A /* NewReleaseViewController.m in Sources */,
 				5F3B554322D8521800959C0A /* MyCollectionTableViewCell.m in Sources */,
 				5F43C18822D741100041708E /* ReleaseTableViewCell.m in Sources */,
+				5FB8E16922DEC2AF00C4C7AA /* baby.xcdatamodeld in Sources */,
 				5F3B553622D8347700959C0A /* MyRecommendTableViewCell.m in Sources */,
 				5F3B554D22D870E000959C0A /* NewQuestionViewController.m in Sources */,
 				5F3B555122D875C400959C0A /* KnowLadgeViewController.m in Sources */,
@@ -463,6 +484,7 @@
 				5F3B553122D82DC700959C0A /* MyRecommendViewController.m in Sources */,
 				5F43C17522D728800041708E /* PersonCenterViewController.m in Sources */,
 				5F43C13622D6D3D90041708E /* AppDelegate.m in Sources */,
+				5FB8E16F22DEC2BA00C4C7AA /* SQLiteSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +771,16 @@
 				5F43C13E22D6D3D90041708E /* baby.xcdatamodel */,
 			);
 			currentVersion = 5F43C13E22D6D3D90041708E /* baby.xcdatamodel */;
+			path = baby.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		5FB8E16722DEC2AF00C4C7AA /* baby.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5FB8E16822DEC2AF00C4C7AA /* baby.xcdatamodel */,
+			);
+			currentVersion = 5FB8E16822DEC2AF00C4C7AA /* baby.xcdatamodel */;
 			path = baby.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

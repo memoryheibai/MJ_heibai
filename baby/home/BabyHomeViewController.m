@@ -17,11 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"!11111111!!!!!!!!!!34434534534534!!!!!!!");
+
     // Do any additional setup after loading the view.
     self.homeTableView.delegate = self;
     self.homeTableView.dataSource = self;
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.homeTableView.backgroundColor=[UIColor redColor];
     
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

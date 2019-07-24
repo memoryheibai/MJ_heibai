@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXI-KT-gtq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXI-KT-gtq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,25 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-3O-skv">
-                                <rect key="frame" x="120" y="18" width="121" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zw6-bk-GRk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-Fs-mIo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-3O-skv">
+                                        <rect key="frame" x="119" y="19" width="137" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="Ndf-Lp-JdJ"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="生活指南"/>
+                                            <segment title="营养食物"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5gE-3O-skv" firstAttribute="centerY" secondItem="XcY-Fs-mIo" secondAttribute="centerY" id="5lT-5W-GGk"/>
+                                    <constraint firstAttribute="height" constant="64" id="Q8T-2K-1LI"/>
+                                    <constraint firstItem="5gE-3O-skv" firstAttribute="centerX" secondItem="XcY-Fs-mIo" secondAttribute="centerX" id="Tu9-re-vFs"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MX8-uW-xrD" firstAttribute="trailing" secondItem="zw6-bk-GRk" secondAttribute="trailing" id="HEb-Rc-6iI"/>
-                            <constraint firstItem="zw6-bk-GRk" firstAttribute="top" secondItem="MX8-uW-xrD" secondAttribute="top" id="KZ9-o9-tTX"/>
-                            <constraint firstItem="zw6-bk-GRk" firstAttribute="leading" secondItem="MX8-uW-xrD" secondAttribute="leading" id="WfQ-z4-6UH"/>
-                            <constraint firstItem="MX8-uW-xrD" firstAttribute="bottom" secondItem="zw6-bk-GRk" secondAttribute="bottom" id="fVh-nh-gIe"/>
+                            <constraint firstItem="XcY-Fs-mIo" firstAttribute="leading" secondItem="MX8-uW-xrD" secondAttribute="leading" id="0um-C3-2SK"/>
+                            <constraint firstAttribute="bottom" secondItem="zw6-bk-GRk" secondAttribute="bottom" id="3SC-iB-6M5"/>
+                            <constraint firstItem="XcY-Fs-mIo" firstAttribute="top" secondItem="MX8-uW-xrD" secondAttribute="top" id="Gcc-do-FK8"/>
+                            <constraint firstItem="zw6-bk-GRk" firstAttribute="top" secondItem="XcY-Fs-mIo" secondAttribute="bottom" id="mSM-pc-d4K"/>
+                            <constraint firstAttribute="trailing" secondItem="zw6-bk-GRk" secondAttribute="trailing" id="rZZ-EN-aAD"/>
+                            <constraint firstItem="MX8-uW-xrD" firstAttribute="trailing" secondItem="XcY-Fs-mIo" secondAttribute="trailing" id="wmo-5c-xa2"/>
+                            <constraint firstItem="zw6-bk-GRk" firstAttribute="leading" secondItem="MX8-uW-xrD" secondAttribute="leading" id="xuN-f5-EgP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MX8-uW-xrD"/>
                     </view>
@@ -47,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Zu-JMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="658"/>
+            <point key="canvasLocation" x="764" y="657.12143928035982"/>
         </scene>
         <!--Registe View Controller-->
         <scene sceneID="kRe-ec-Jv2">
@@ -61,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-3h-vU4">
-                                        <rect key="frame" x="115" y="37.5" width="145" height="175.00000000000003"/>
+                                        <rect key="frame" x="115" y="37.5" width="145" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="HCz-wH-whp"/>
                                             <constraint firstAttribute="width" constant="145" id="wz8-NY-6nz"/>
@@ -199,7 +215,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-aP-1AE">
-                                        <rect key="frame" x="115" y="37.5" width="145" height="175.00000000000003"/>
+                                        <rect key="frame" x="115" y="37.5" width="145" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="Gps-SI-TmD"/>
                                             <constraint firstAttribute="width" constant="145" id="yjd-o0-kus"/>
@@ -902,18 +918,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addphoto" width="90" height="70.5"/>
+        <image name="addphoto" width="90" height="70"/>
         <image name="closereg" width="17" height="17"/>
-        <image name="headImage" width="31.5" height="31.5"/>
-        <image name="home_off" width="17.5" height="17"/>
-        <image name="knowledge_off" width="16" height="16.5"/>
-        <image name="leftquestion" width="8" height="124.5"/>
-        <image name="loginLogo" width="144" height="173.5"/>
-        <image name="navBackImage" width="10.5" height="15"/>
+        <image name="headImage" width="31" height="31"/>
+        <image name="home_off" width="17" height="17"/>
+        <image name="knowledge_off" width="16" height="16"/>
+        <image name="leftquestion" width="8" height="124"/>
+        <image name="loginLogo" width="144" height="173"/>
+        <image name="navBackImage" width="10" height="15"/>
         <image name="personHeadImage" width="109" height="109"/>
         <image name="person_off" width="19" height="18"/>
         <image name="release_off" width="17" height="18"/>
-        <image name="titleimage1" width="13.5" height="13"/>
+        <image name="titleimage1" width="13" height="13"/>
     </resources>
     <color key="tintColor" red="0.98431372549999996" green="0.52156862749999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

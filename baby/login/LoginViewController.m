@@ -37,12 +37,26 @@
 - (IBAction)loginBtnClicked:(id)sender {
     
 //    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-//    [ud setObject:self.accountTF.text forKey:@"user_name"];
-//    [ud setObject:self.passwordTF.text forKey:@"password"];
+//    NSDictionary *users = [ud objectForKey:@"users"];
+//    if (users == nil || [users objectForKey:self.accountTF.text] == nil) {
+//        //提示没有该账号
+//    } else {
+//        NSString *password = [users objectForKey:self.accountTF.text];
+//        if([self.passwordTF.text isEqualToString:password]) {
+//            //登录成功
+//
+//            [ud setObject:self.accountTF.text forKey:@"user_name"];
+//        } else {
+            //登录失败，密码不对
+             [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+//        }
+//    }
 
-    [self dismissViewControllerAnimated:YES completion:^{
-
-    }];
+  
 }
+
+
 
 @end
