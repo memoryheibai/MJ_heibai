@@ -7,6 +7,10 @@
 
 #import "BabyHomeViewController.h"
 #import "HomeTableViewCell.h"
+#import "MyRecommendViewController.h"
+#import "MyQuestionViewController.h"
+#import "MyCollectionViewController.h"
+
 @interface BabyHomeViewController ()<UITableViewDataSource,UITableViewDelegate>{
     
 }
@@ -17,19 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"!11111111!!!!!!!!!!34434534534534!!!!!!!");
-
     // Do any additional setup after loading the view.
     self.homeTableView.delegate = self;
     self.homeTableView.dataSource = self;
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.homeTableView.backgroundColor=[UIColor redColor];
-    
-    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
@@ -55,7 +53,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 180;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -69,7 +67,7 @@
     //初始化单元格
     if(cell == nil)
     {
-        NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"PersonTableViewCell" owner:self options:nil];
+        NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCell" owner:self options:nil];
         //xib文件
         cell = [nib objectAtIndex:0];
     }
@@ -81,12 +79,19 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"mytuijian" sender:nil];
+        MyRecommendViewController *recommend = [sb instantiateViewControllerWithIdentifier:@"myRecommend"];
+        [self.navigationController pushViewController:recommend animated:YES];
+        //[self performSegueWithIdentifier:@"mytuijian" sender:nil];
     }else if(indexPath.row == 1){
-        [self performSegueWithIdentifier:@"myquestion" sender:nil];
+        MyQuestionViewController *question = [sb instantiateViewControllerWithIdentifier:@"myQuestion"];
+        [self.navigationController pushViewController:question animated:YES];
+        //[self performSegueWithIdentifier:@"myquestion" sender:nil];
     }else if (indexPath.row == 2){
-        [self performSegueWithIdentifier:@"mycollection" sender:nil];
+        MyCollectionViewController *collection = [sb instantiateViewControllerWithIdentifier:@"myCollection"];
+        [self.navigationController pushViewController:collection animated:YES];
+       // [self performSegueWithIdentifier:@"mycollection" sender:nil];
     }else{
         
     }

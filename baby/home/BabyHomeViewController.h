@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BabyHomeViewController : UITabBarController
+@interface BabyHomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @end

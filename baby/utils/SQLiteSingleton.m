@@ -35,13 +35,13 @@
 /*创建数据库
  *
  */
-- (BOOL)createDB {
+- (BOOL)openDB {
     BOOL flag;
     NSError *error;
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [[[NSBundle mainBundle]bundlePath]stringByAppendingPathComponent:@"babycome.sqlite"];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"babycome.sqlite"];
     [fm  removeItemAtPath:writableDBPath error:&error];
     flag = [fm fileExistsAtPath:writableDBPath];
     if(!flag) {

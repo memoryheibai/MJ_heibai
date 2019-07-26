@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SQLiteSingleton : NSObject
 
 + (SQLiteSingleton *)shareInstance;
-- (BOOL)createDB;
+- (BOOL)openDB;
+- (void)closeDB;
 
 + (instancetype) alloc __attribute__((unavailable("call sharedInstance instead")));
 + (instancetype) new __attribute__((unavailable("call sharedInstance instead")));

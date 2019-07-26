@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXI-KT-gtq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aXI-KT-gtq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="64"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-3O-skv">
-                                        <rect key="frame" x="119" y="19" width="137" height="28"/>
+                                        <rect key="frame" x="119" y="18.5" width="137" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="Ndf-Lp-JdJ"/>
                                         </constraints>
@@ -328,7 +328,7 @@
         <!--首页-->
         <scene sceneID="oMV-2r-avx">
             <objects>
-                <viewController id="OJg-tn-oxe" customClass="BabyHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="OJg-tn-oxe" customClass="BabyHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yk9-uS-YFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,12 +723,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSD-El-3v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="1486"/>
+            <point key="canvasLocation" x="-90" y="1235"/>
         </scene>
         <!--我的推荐-->
         <scene sceneID="Z0K-Mz-W5T">
             <objects>
-                <viewController id="ZZf-i8-hIs" customClass="MyRecommendViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myRecommend" id="ZZf-i8-hIs" customClass="MyRecommendViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="27j-C1-GWF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -765,12 +765,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51t-gy-LMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="2266"/>
+            <point key="canvasLocation" x="1518" y="2221"/>
         </scene>
         <!--我的收藏-->
         <scene sceneID="FyM-5Y-7ip">
             <objects>
-                <viewController id="ynF-TK-2uP" customClass="MyCollectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myCollection" id="ynF-TK-2uP" customClass="MyCollectionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ge-Xv-4e0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -812,7 +812,7 @@
         <!--我的提问-->
         <scene sceneID="gMX-du-COf">
             <objects>
-                <viewController id="fb6-cp-AaG" customClass="MyQuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myQuestion" id="fb6-cp-AaG" customClass="MyQuestionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xXR-Q2-HGT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -918,18 +918,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addphoto" width="90" height="70"/>
+        <image name="addphoto" width="90" height="70.5"/>
         <image name="closereg" width="17" height="17"/>
-        <image name="headImage" width="31" height="31"/>
-        <image name="home_off" width="17" height="17"/>
-        <image name="knowledge_off" width="16" height="16"/>
-        <image name="leftquestion" width="8" height="124"/>
-        <image name="loginLogo" width="144" height="173"/>
-        <image name="navBackImage" width="10" height="15"/>
+        <image name="headImage" width="31.5" height="31.5"/>
+        <image name="home_off" width="17.5" height="17"/>
+        <image name="knowledge_off" width="16" height="16.5"/>
+        <image name="leftquestion" width="8" height="124.5"/>
+        <image name="loginLogo" width="144" height="173.5"/>
+        <image name="navBackImage" width="10.5" height="15"/>
         <image name="personHeadImage" width="109" height="109"/>
         <image name="person_off" width="19" height="18"/>
         <image name="release_off" width="17" height="18"/>
-        <image name="titleimage1" width="13" height="13"/>
+        <image name="titleimage1" width="13.5" height="13"/>
     </resources>
     <color key="tintColor" red="0.98431372549999996" green="0.52156862749999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

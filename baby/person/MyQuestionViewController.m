@@ -7,6 +7,8 @@
 
 #import "MyQuestionViewController.h"
 #import "MyQuestionTableViewCell.h"
+#import "SQLiteSingleton.h"
+
 @interface MyQuestionViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray *titleArr;
     NSArray *messageArr;
